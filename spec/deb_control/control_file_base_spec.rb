@@ -79,6 +79,11 @@ Field7: b
       expect(values).to eq({ 'Field' => 'v:alue', 'Key' => 'data' })
       expect(values.keys).to eq ['Field', 'Key']
     end
+
+    it 'multi-line values' do
+      values = subject.parse_paragraph(['Field: first-line', ' second-line'])
+      expect(values).to eq({ 'Field' => "first-line\nsecond-line"})
+    end
   end
 
   describe '#read' do

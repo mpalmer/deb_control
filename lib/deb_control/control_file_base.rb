@@ -20,9 +20,23 @@ module DebControl
 
     def self.parse_paragraph(lines)
       fields = {}
+      field = nil
+      value = nil
       lines.each do |line|
-        field, value = line.split ':', 2
-        fields[field] = value.strip
+        if line.include? ':'  # no value
+          unless field.nil?
+            fields[field] = value
+          end
+          field, value = line.split ':', 2
+          value.strip!
+        elsif line =~ /^\s/
+          value += "\n" + line.strip
+        else
+          # error
+        end
+      end
+      unless field.nil?
+        fields[field] = value
       end
       fields
     end
