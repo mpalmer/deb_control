@@ -1,5 +1,10 @@
 # DebControl
 
+[![Gem Version](https://badge.fury.io/rb/deb_control.png)](http://badge.fury.io/rb/deb_control)
+[![Build Status](https://travis-ci.org/mswart/deb_control.png?branch=master)](https://travis-ci.org/mswart/deb_control)
+[![Coverage Status](https://coveralls.io/repos/mswart/deb_control/badge.png?branch=master)](https://coveralls.io/r/mswart/deb_control)
+[![Code Climate](https://codeclimate.com/github/mswart/deb_control.png)](https://codeclimate.com/github/mswart/deb_control)
+
 DebControl contains helper classes to read Debian control files. Write support is planed.
 
 **This gem is under development. Every 0.x release might break backwards compatibility.**
