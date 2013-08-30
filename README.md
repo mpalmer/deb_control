@@ -25,9 +25,9 @@ The Class DebControl::ControlFileBase implements a generic parser for control fi
 
 ```ruby
 control = DebControl::ControlFileBase.read 'debian/control'
-// receive the array from paragraphs
+# receive the array from paragraphs:
 control.paragraphs.size
-// receive fields of paragraph
+# receive fields of paragraph:
 control.paragraphs.first['Source']
 ```
 
